@@ -1,26 +1,205 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackViewMagic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnw-Es-nvR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="dCw-Jn-xAd"/>
+                                    <constraint firstAttribute="height" constant="250" id="dDq-DU-QIO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="adh-b6-X5W">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kca-Jf-aEj">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thw-hJ-2Mo">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="⚙ SETTINGS">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSettingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0va-oC-fis"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1744679334" green="0.89659685860000005" blue="0.18868838399999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="thw-hJ-2Mo" firstAttribute="centerY" secondItem="Kca-Jf-aEj" secondAttribute="centerY" id="QHC-jF-xIW"/>
+                                            <constraint firstItem="thw-hJ-2Mo" firstAttribute="centerX" secondItem="Kca-Jf-aEj" secondAttribute="centerX" id="u3E-1V-zd7"/>
+                                            <constraint firstAttribute="height" constant="80" id="zBh-Db-ecg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrk-Sm-NAh">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAp-bd-DX4">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="🍕 PIZZA">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pizzaBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVz-Qv-rrb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ZAp-bd-DX4" firstAttribute="centerX" secondItem="Yrk-Sm-NAh" secondAttribute="centerX" id="Jyt-x1-ZmS"/>
+                                            <constraint firstItem="ZAp-bd-DX4" firstAttribute="centerY" secondItem="Yrk-Sm-NAh" secondAttribute="centerY" id="nS8-d7-46b"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc9-X9-KU4">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-ke-DBD">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="🌎 HELLO WORLD">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="worldBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUN-gJ-kmf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="0tg-ke-DBD" firstAttribute="centerY" secondItem="jc9-X9-KU4" secondAttribute="centerY" id="4xj-CZ-olx"/>
+                                            <constraint firstItem="0tg-ke-DBD" firstAttribute="centerX" secondItem="jc9-X9-KU4" secondAttribute="centerX" id="JPf-TW-g27"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9a-uu-0u8">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6th-2M-ggG">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="👾 GAME MODE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gameBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4w6-zu-5l1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6th-2M-ggG" firstAttribute="centerX" secondItem="o9a-uu-0u8" secondAttribute="centerX" id="BKr-Zd-Cbl"/>
+                                            <constraint firstItem="6th-2M-ggG" firstAttribute="centerY" secondItem="o9a-uu-0u8" secondAttribute="centerY" id="zFG-Ye-arj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-Ku-7Ia">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-lk-M8h">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="🔥 HOT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hotBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ncp-ih-dvZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="NPb-lk-M8h" firstAttribute="centerY" secondItem="mpf-Ku-7Ia" secondAttribute="centerY" id="VqM-5Q-0xB"/>
+                                            <constraint firstItem="NPb-lk-M8h" firstAttribute="centerX" secondItem="mpf-Ku-7Ia" secondAttribute="centerX" id="z6d-Hh-vg4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQI-ME-6gz">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-q6-Ugz">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="☕️ COFFEE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="coffeeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xky-HU-HmD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="uD4-q6-Ugz" firstAttribute="centerX" secondItem="jQI-ME-6gz" secondAttribute="centerX" id="ZDI-aw-Lsu"/>
+                                            <constraint firstItem="uD4-q6-Ugz" firstAttribute="centerY" secondItem="jQI-ME-6gz" secondAttribute="centerY" id="cCk-3t-u9p"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcn-B9-Dqj">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiD-2G-iH1">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="🚀 BLAST OFF">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rocketBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjV-iV-wpv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.67130697706935116" green="0.93834766498881417" blue="0.92054670022371354" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="YiD-2G-iH1" firstAttribute="centerX" secondItem="Kcn-B9-Dqj" secondAttribute="centerX" id="6Tb-gg-o7g"/>
+                                            <constraint firstItem="YiD-2G-iH1" firstAttribute="centerY" secondItem="Kcn-B9-Dqj" secondAttribute="centerY" id="ZZe-5i-Eqd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZI-9K-l6X">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMI-bZ-xoj">
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal" title="🌮 TACO TIME">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tacoBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmm-hQ-8zf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="WMI-bZ-xoj" firstAttribute="centerX" secondItem="LZI-9K-l6X" secondAttribute="centerX" id="V4g-6R-tpO"/>
+                                            <constraint firstItem="WMI-bZ-xoj" firstAttribute="centerY" secondItem="LZI-9K-l6X" secondAttribute="centerY" id="knj-tj-bXf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.70196078431372544" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="adh-b6-X5W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9iW-6M-Anm"/>
+                            <constraint firstItem="Gnw-Es-nvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d3f-L4-6nP"/>
+                            <constraint firstItem="Gnw-Es-nvR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dAX-rx-gfa"/>
+                            <constraint firstItem="adh-b6-X5W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g9L-Vc-7IJ"/>
+                            <constraint firstAttribute="trailing" secondItem="adh-b6-X5W" secondAttribute="trailing" id="h87-s4-18v"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emojiText" destination="Gnw-Es-nvR" id="9cW-Jj-se8"/>
+                        <outletCollection property="emojiView" destination="Yrk-Sm-NAh" collectionClass="NSMutableArray" id="QDn-EB-vwa"/>
+                        <outletCollection property="emojiView" destination="jc9-X9-KU4" collectionClass="NSMutableArray" id="IMm-5C-0VR"/>
+                        <outletCollection property="emojiView" destination="o9a-uu-0u8" collectionClass="NSMutableArray" id="fgN-bu-usU"/>
+                        <outletCollection property="emojiView" destination="mpf-Ku-7Ia" collectionClass="NSMutableArray" id="ag0-zn-7RR"/>
+                        <outletCollection property="emojiView" destination="jQI-ME-6gz" collectionClass="NSMutableArray" id="T2C-0c-EUT"/>
+                        <outletCollection property="emojiView" destination="Kcn-B9-Dqj" collectionClass="NSMutableArray" id="Ufk-SU-q4F"/>
+                        <outletCollection property="emojiView" destination="LZI-9K-l6X" collectionClass="NSMutableArray" id="V2A-qZ-dHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="122.28260869565219"/>
         </scene>
     </scenes>
 </document>
